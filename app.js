@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  let sumResult = a+b;
-  return [sumResult,`The sum of ${a} and ${b} is ${sumResult}.`]
-  
+  let sumResult = a + b;
+  return [sumResult, `The sum of ${a} and ${b} is ${sumResult}.`]
+
   //eslint-disable-line
 }
 
@@ -31,12 +31,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   let output = a * b;
-  return[output,`The product of ${a} and ${b} is ${output}.`]
+  return [output, `The product of ${a} and ${b} is ${output}.`]
   //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -54,12 +54,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   //eslint-disable-line
-  
- 
+  let sum1 = sum(a, b)[0];
+  let sumResult = sum(sum1, c)[0];
+  let mult1 = multiply(a, b)[0];
+  let multResult = multiply(mult1, c)[0];
+  return [sumResult, multResult, `${a} and ${b} and ${c} sum to ${sumResult}.`, `The product of ${a} and ${b} and ${c} is ${multResult}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
